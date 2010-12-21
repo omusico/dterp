@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <table nick="admin" name="nseer_admin" database="ondemand2">
+    <column url="/erp/design/file/check_list.jsp" sql="select * from design_file where  check_tag='0' and excel_tag!='0' order by register_time" pageno="1" />
+    <column url="/erp/design/file/query_list.jsp" sql="select * from design_file where  check_tag='1' and gar_tag='0' order by register_time desc" pageno="1" />
+  </table>
+</config>
+
