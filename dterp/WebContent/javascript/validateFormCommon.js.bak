@@ -1,0 +1,61 @@
+
+//tel
+function validateCommonTel(obj)
+{
+	
+	var flag=false;
+	var v1=/((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/;
+	
+	if(obj.value==""){
+		
+		flag=false;
+		
+	}else if(obj.value!=""){
+		
+		if(!v1.test(obj.value)){
+			flag=true;
+		}
+	}
+	
+	return flag;
+}
+//fax
+function validateCommonFax(obj)
+{
+	
+	var flag=false;
+	var v1=/^(\d{3,4})\-{0,1}(\d{7,8})$/;
+	
+	if(obj.value==""){
+		
+		flag=false;
+		
+	}else if(obj.value!=""){
+		
+		if(!v1.test(obj.value)){
+			flag=true;
+		}
+	}
+	
+	return flag;
+}
+//postal code
+function validateCommonPostalCode(obj)
+{
+	
+	var flag=false;
+	var v1=/^[1-9]\d{5}$/;
+	
+	if(obj.value==""){
+		
+		flag=false;
+		
+	}else if(obj.value!=""){
+		
+		if(!v1.test(obj.value)){
+			flag=true;
+		}
+	}
+	
+	return flag;
+}

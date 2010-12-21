@@ -1,0 +1,49 @@
+-- phpMyAdmin SQL Dump
+-- version 3.1.1
+-- http://www.phpmyadmin.net
+--
+-- 主机: localhost
+-- 生成日期: 2010 年 07 月 01 日 06:09
+-- 服务器版本: 5.1.30
+-- PHP 版本: 5.2.8
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- 数据库: `mysql` 
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `unit_info`
+--
+
+CREATE TABLE IF NOT EXISTS `unit_info` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `unit_name` varchar(200) NOT NULL DEFAULT '',
+  `unit_id` varchar(100) NOT NULL DEFAULT '',
+  `business_license` varchar(60) NOT NULL DEFAULT '',
+  `tel` varchar(60) NOT NULL DEFAULT '',
+  `address` varchar(200) NOT NULL DEFAULT '',
+  `postcode` varchar(30) NOT NULL DEFAULT '',
+  `contact_person` varchar(60) NOT NULL DEFAULT '',
+  `email` varchar(60) NOT NULL DEFAULT '',
+  `cell` varchar(60) NOT NULL DEFAULT '',
+  `field_type` varchar(60) NOT NULL DEFAULT '',
+  `unit_db_name` varchar(60) NOT NULL DEFAULT '',
+  `register_time` datetime NOT NULL DEFAULT '1800-01-01 00:00:00',
+  `ip` varchar(60) NOT NULL DEFAULT '',
+  `expiry_period` int(11) unsigned NOT NULL DEFAULT '0',
+  `use_period` date NOT NULL DEFAULT '1800-01-01',
+  `user_amount` int(11) unsigned NOT NULL DEFAULT '0',
+  `active_tag` int(1) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 导出表中的数据 `unit_info`
+--
+
+INSERT INTO `unit_info` (`id`, `unit_name`, `unit_id`, `business_license`, `tel`, `address`, `postcode`, `contact_person`, `email`, `cell`, `field_type`, `unit_db_name`, `register_time`, `ip`, `expiry_period`, `use_period`, `user_amount`, `active_tag`) VALUES
+(1, '上海慧索计算机科技ERP用户', 'hst', '', '', '', '', '', '', '', '0', 'ondemand2', '2007-01-21 15:40:17', '192.168.1.115', 1000, '2099-01-01', 666, 1);
